@@ -15,3 +15,9 @@ hogy a tömb minden eleme number típusú-e vagy sem
 - `someElementsAreNumbers`: Értéke true/false attól függően, 
 hogy a tömbben van-e number típusú elem vagy sem
 */
+const checker = (arr, value) => ({
+    exists : arr.some(e => e == value),
+    index : arr.indexOf(value),
+    allElementsAreNumbers : arr.every(e => !isNaN(e)),
+    someElementsAreNumbers : arr.some(e => !isNaN(e))
+});
